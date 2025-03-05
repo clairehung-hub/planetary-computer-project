@@ -12,22 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install dependencies
-        run: |
-        pip install planetary-computer pystac-client rasterio folium matplotlib
-      
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.10'
+          python-version: '3.9'  # ✅ 使用穩定版 Python 3.9
 
       - name: Install dependencies
         run: |
-          pip install planetary-computer pystac-client rasterio folium
+          pip install planetary-computer pystac-client rasterio folium matplotlib
 
       - name: Run Python script
         run: python analysis.py
- 
