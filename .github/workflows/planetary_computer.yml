@@ -1,5 +1,5 @@
-name: Install dependencies
-  run: |
+- name: Install dependencies
+   run: |
     pip install planetary-computer pystac-client rasterio folium matplotlib
 
 
