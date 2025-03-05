@@ -1,6 +1,3 @@
-- name: Install dependencies
-  run: |
-    pip install planetary-computer pystac-client rasterio folium matplotlib
 name: Run Planetary Computer Analysis
 
 on:
@@ -15,13 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install dependencies
+        run: |
+        pip install planetary-computer pystac-client rasterio folium matplotlib
+      
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.13'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
