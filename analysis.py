@@ -22,5 +22,7 @@ if items:
     # 讀取影像並顯示
     with rasterio.open(signed_asset) as dataset:
         show(dataset)
+    dataset.read(1).tofile("output_image.tif")  # 儲存影像
+
 else:
     print("未找到符合條件的數據")
