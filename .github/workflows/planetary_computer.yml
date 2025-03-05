@@ -30,6 +30,6 @@ jobs:
       - name: Upload result image
         uses: actions/upload-artifact@v3
         with:
-        name: sentinel-image
-        path: output_image.tif
+          name: sentinel-image  # ✅ 正確縮排
+          path: output_image.tif  # ✅ 正確縮排
 
