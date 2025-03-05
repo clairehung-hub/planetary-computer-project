@@ -26,3 +26,10 @@ jobs:
 
       - name: Run Python script
         run: python analysis.py
+
+      - name: Upload result image
+        uses: actions/upload-artifact@v3
+        with:
+        name: sentinel-image
+        path: output_image.tif
+
